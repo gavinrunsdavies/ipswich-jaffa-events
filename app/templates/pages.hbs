@@ -1,0 +1,7 @@
+<h2 class="center-align">This is the Pages route</h2>  
+
+{{#each model as |page|}}
+  <h3>{{page.title}}</h3>
+  <h4>{{page.slug}} - {{page.date}}</h4>
+  <p>{{page.content}}</p>
+{{/each}}
