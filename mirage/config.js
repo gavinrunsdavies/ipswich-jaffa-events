@@ -26,7 +26,7 @@ export default function() {
   
   this.get('/pages', function() {
     return {
-      data: [{		   
+      data: [{
 		"id": 4646,
 		"date": "2015-04-10T13:56:33",
 		"date_gmt": "2015-04-10T12:56:33",
@@ -37,7 +37,7 @@ export default function() {
 		"modified_gmt": "2015-04-10T12:56:33",
 		"slug": "gavin",
 		"status": "publish",
-		"type": "pages",
+		"type": "post",
 		"link": "http:\/\/test.ipswichjaffa.org.uk\/gavin\/",
 		"title": {
 			"rendered": "gavin"
@@ -119,7 +119,7 @@ export default function() {
 		"modified_gmt": "2014-01-08T11:30:33",
 		"slug": "enter",
 		"status": "publish",
-		"type": "pages",
+		"type": "post",
 		"link": "http:\/\/test.ipswichjaffa.org.uk\/enter\/",
 		"title": {
 			"rendered": "Enter"
@@ -201,7 +201,7 @@ export default function() {
 		"modified_gmt": "2014-01-08T11:29:46",
 		"slug": "the-race",
 		"status": "publish",
-		"type": "pages",
+		"type": "post",
 		"link": "http:\/\/test.ipswichjaffa.org.uk\/the-race\/",
 		"title": {
 			"rendered": "The Race"
@@ -276,4 +276,91 @@ export default function() {
 ]
     };
   });
+  
+   this.get('http://test.ipswichjaffa.org.uk/wp-json/wp/v2/posts', function() {
+    return [{      
+		"id": 4114,
+		"date": "2014-01-08T12:30:33",
+		"date_gmt": "2014-01-08T11:30:33",
+		"guid": {
+			"rendered": "http:\/\/test.ipswichjaffa.org.uk\/?p=4114"
+		},
+		"modified": "2014-01-08T12:30:33",
+		"modified_gmt": "2014-01-08T11:30:33",
+		"slug": "enter",
+		"status": "publish",
+		"type": "post",
+		"link": "http:\/\/test.ipswichjaffa.org.uk\/enter\/",
+		"title": {
+			"rendered": "Enter"
+		},
+		"content": {
+			"rendered": "\n<p>On-line entry for the 2014 Ipswich Friday 5 will open in the New Year. Please enter in advance and on-line as there will only be limited entries on the night which closes at 6:45pm prompt.<\/p>\n<p>Entry fees for on-the-night are as follows<\/p>\n<ul>\n<li>\u00a312 Affiliated<\/li>\n<li>\u00a314 Non affiliated<\/li>\n<\/ul>\n<p>Please arrive early to avoid disappointment.<\/p>\n",
+			"protected": false
+		},
+		"excerpt": {
+			"rendered": "<p>On-line entry for the 2014 Ipswich Friday 5 will open in the New Year. Please enter in advance and on-line as there will only be limited entries on the night which closes at 6:45pm prompt. Entry fees for on-the-night are<span class=\"ellipsis\">&hellip;<\/span> <a href=\"http:\/\/test.ipswichjaffa.org.uk\/enter\/\"><\/p>\n<div class=\"read-more\">Read more &#8250;<\/div>\n<p><!-- end of .read-more --><\/a><\/p>\n",
+			"protected": false
+		},
+		"author": 1,
+		"featured_media": 0,
+		"comment_status": "open",
+		"ping_status": "closed",
+		"sticky": false,
+		"template": "",
+		"format": "standard",
+		"meta": [],
+		"categories": [16],
+		"tags": [],
+		"_links": {
+			"self": [{
+					"href": "http:\/\/test.ipswichjaffa.org.uk\/wp-json\/wp\/v2\/posts\/4114"
+				}
+			],
+			"collection": [{
+					"href": "http:\/\/test.ipswichjaffa.org.uk\/wp-json\/wp\/v2\/posts"
+				}
+			],
+			"about": [{
+					"href": "http:\/\/test.ipswichjaffa.org.uk\/wp-json\/wp\/v2\/types\/post"
+				}
+			],
+			"author": [{
+					"embeddable": true,
+					"href": "http:\/\/test.ipswichjaffa.org.uk\/wp-json\/wp\/v2\/users\/1"
+				}
+			],
+			"replies": [{
+					"embeddable": true,
+					"href": "http:\/\/test.ipswichjaffa.org.uk\/wp-json\/wp\/v2\/comments?post=4114"
+				}
+			],
+			"version-history": [{
+					"href": "http:\/\/test.ipswichjaffa.org.uk\/wp-json\/wp\/v2\/posts\/4114\/revisions"
+				}
+			],
+			"wp:attachment": [{
+					"href": "http:\/\/test.ipswichjaffa.org.uk\/wp-json\/wp\/v2\/media?parent=4114"
+				}
+			],
+			"wp:term": [{
+					"taxonomy": "category",
+					"embeddable": true,
+					"href": "http:\/\/test.ipswichjaffa.org.uk\/wp-json\/wp\/v2\/categories?post=4114"
+				}, {
+					"taxonomy": "post_tag",
+					"embeddable": true,
+					"href": "http:\/\/test.ipswichjaffa.org.uk\/wp-json\/wp\/v2\/tags?post=4114"
+				}
+			],
+			"curies": [{
+					"name": "wp",
+					"href": "https:\/\/api.w.org\/{rel}",
+					"templated": true
+				}
+			]
+		}
+    }]
+  });
+
 }

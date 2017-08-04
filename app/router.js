@@ -13,6 +13,8 @@ Router.map(function() {
   this.route('team-declaration');  
   this.route('gallery');
   this.route('results');
+  this.route('page', {path: 'page/:page_slug'});
+  
 });
 
 export default Router;
