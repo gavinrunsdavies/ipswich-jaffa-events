@@ -1,0 +1,23 @@
+<h1>Ekiden.hbs</h1>
+
+<h2 class="center-align">This is the About route</h2>  
+<h2>About</h2>
+    
+     {{#each model.about as |about|}}
+    {{{about.content}}}
+  {{/each}}
+  <h2>Enter</h2>
+    
+     {{#each model.enter as |enter|}}
+     1{{enter}}
+      2{{enter.title}}
+      3{{enter.date}}
+      4{{{enter.content}}}
+    {{/each}}
+
+    <h2>Model 3</h2>
+    <ul>
+    {{#each model.model3 as |item|}}
+      <li>{{item}}</li>
+    {{/each}}
+    </ul>

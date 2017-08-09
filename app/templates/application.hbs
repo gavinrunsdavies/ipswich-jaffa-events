@@ -42,20 +42,56 @@
   {{/paper-toolbar-tools}}
 {{/paper-toolbar}}
 
-	<h2>hello</h2>
-{{#link-to 'application'}}Home{{/link-to}}
-{{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'enter'}}Enter{{/link-to}}
-{{#link-to 'team-declaration'}}Team Declaration{{/link-to}}
-{{#link-to 'gallery'}}Gallery{{/link-to}}
-{{#link-to 'results'}}Results{{/link-to}}
-{{#link-to 'pages'}}Pages{{/link-to}}
-{{link-to 'Enter page' 'page' 'enter'}}
+<div class="layout-row layout-xs-column layout-align-center-center">
+  <div class="layout-column flex-xs flex-gt-xs-35">
+    {{#paper-card as |card|}}
+      {{card.image src="washedout-70b84b894d88b367d49d56a8cd808cca.png" alt="Washed Out" title="Washed Out"}}
+      {{#card.title as |title|}}
+        {{#title.text as |text|}}
+          {{#text.headline}}Ekiden Relay{{/text.headline}}
+        {{/title.text}}
+      {{/card.title}}
+      {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
+        {{#actions.icons}}
+          {{#paper-button iconButton=true}}{{paper-icon 'favorite'}}{{/paper-button}}
+          {{#paper-button iconButton=true}}{{paper-icon 'share'}}{{/paper-button}}
+        {{/actions.icons}}
+        {{#paper-button href="/ekiden#enter"}}Enter{{/paper-button}}
+        {{#paper-button href="/ekiden"}}About{{/paper-button}}
+      {{/card.actions}}
+      {{#card.content}}
+        <p>
+          The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+        </p>
+      {{/card.content}}
+    {{/paper-card}}   
+  </div>
 
-{{#parallax-content speed=0.5 height=400 }}
-  <img src="./img/stellar-spire-eagle-nebula-1400x900.jpg">
-{{/parallax-content}}
+  <div class="layout-column flex-xs flex-gt-xs-35">
+    {{#paper-card as |card|}}
+      {{card.image src="washedout-70b84b894d88b367d49d56a8cd808cca.png" alt="Washed Out" title="Washed Out"}}
+      {{#card.title as |title|}}
+        {{#title.text as |text|}}
+          {{#text.headline}}Cross Country{{/text.headline}}
+        {{/title.text}}
+      {{/card.title}}
+      {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
+        {{#actions.icons}}
+          {{#paper-button iconButton=true}}{{paper-icon 'favorite'}}{{/paper-button}}
+          {{#paper-button iconButton=true}}{{paper-icon 'share'}}{{/paper-button}}
+        {{/actions.icons}}
+        {{#paper-button href="/cross-country#enter"}}Enter{{/paper-button}}
+        {{#paper-button href="/cross-country"}}About{{/paper-button}}
+      {{/card.actions}}
+      {{#card.content}}
+        <p>
+          The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+        </p>
+      {{/card.content}}
+    {{/paper-card}}   
+  </div>
+</div>
 
-<div class="container">  
- {{outlet}}
-</div> 
+{{outlet}}
