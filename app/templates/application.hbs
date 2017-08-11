@@ -1,97 +1,32 @@
-
-{{#paper-toolbar}}
-  {{#paper-toolbar-tools}}
-  {{#paper-menu as |menu|}}
-     {{#menu.trigger}}
-		{{#paper-button iconButton=true}}
-		  {{paper-icon "menu"}}
-		{{/paper-button}}
-	{{/menu.trigger}}
-	{{#menu.content width=4}}
-    {{#content.menu-item}}
-      {{paper-icon "local_phone"}}	  
-      <span>About</span>
-    {{/content.menu-item}}
-	  {{#content.menu-item}}
-      {{paper-icon "local_phone"}}	  
-      <span>Enter</span>
-    {{/content.menu-item}}
-	  {{#content.menu-item}}
-      {{paper-icon "local_phone"}}
-      <span>Gallery</span>
-    {{/content.menu-item}}
-
-    {{paper-divider}}
-
-     {{#content.menu-item disabled=true}}
-      {{paper-icon "adb"}}
-      <span>This is disabled.</span>
-    {{/content.menu-item}}
-  {{/menu.content}}
-  {{/paper-menu}}
-    <h2>
-      Toolbar with Icon Buttons
-    </h2>
-    <span class="flex"></span>
-    {{#paper-button iconButton=true}}
-      {{paper-icon "favorite"}}
-    {{/paper-button}}
-    {{#paper-button iconButton=true}}
-      {{paper-icon "more_vert"}}
-    {{/paper-button}}
-  {{/paper-toolbar-tools}}
-{{/paper-toolbar}}
-
-<div class="layout-row layout-xs-column layout-align-center-center">
-  <div class="layout-column flex-xs flex-gt-xs-35">
-    {{#paper-card as |card|}}
-      {{card.image src="washedout-70b84b894d88b367d49d56a8cd808cca.png" alt="Washed Out" title="Washed Out"}}
-      {{#card.title as |title|}}
-        {{#title.text as |text|}}
-          {{#text.headline}}Ekiden Relay{{/text.headline}}
-        {{/title.text}}
-      {{/card.title}}
-      {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
-        {{#actions.icons}}
-          {{#paper-button iconButton=true}}{{paper-icon 'favorite'}}{{/paper-button}}
-          {{#paper-button iconButton=true}}{{paper-icon 'share'}}{{/paper-button}}
-        {{/actions.icons}}
-        {{#paper-button href="/ekiden#enter"}}Enter{{/paper-button}}
-        {{#paper-button href="/ekiden"}}About{{/paper-button}}
-      {{/card.actions}}
-      {{#card.content}}
-        <p>
-          The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
-        </p>
-      {{/card.content}}
-    {{/paper-card}}   
-  </div>
-
-  <div class="layout-column flex-xs flex-gt-xs-35">
-    {{#paper-card as |card|}}
-      {{card.image src="washedout-70b84b894d88b367d49d56a8cd808cca.png" alt="Washed Out" title="Washed Out"}}
-      {{#card.title as |title|}}
-        {{#title.text as |text|}}
-          {{#text.headline}}Cross Country{{/text.headline}}
-        {{/title.text}}
-      {{/card.title}}
-      {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
-        {{#actions.icons}}
-          {{#paper-button iconButton=true}}{{paper-icon 'favorite'}}{{/paper-button}}
-          {{#paper-button iconButton=true}}{{paper-icon 'share'}}{{/paper-button}}
-        {{/actions.icons}}
-        {{#paper-button href="/cross-country#enter"}}Enter{{/paper-button}}
-        {{#paper-button href="/cross-country"}}About{{/paper-button}}
-      {{/card.actions}}
-      {{#card.content}}
-        <p>
-          The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
-        </p>
-      {{/card.content}}
-    {{/paper-card}}   
-  </div>
-</div>
-
 {{outlet}}
+
+{{#mdl-mega-footer}}
+  
+  <!-- Top Section -->
+  {{#mdl-footer-section align='bottom' title='Top Title'}}
+    {{#mdl-footer-linklist}}
+      {{link-to 'Link 1' 'index' tagName='li'}}
+      {{link-to 'Link 2' 'index' tagName='li'}}      
+    {{/mdl-footer-linklist}}
+  {{/mdl-footer-section}}
+
+  <!-- Middle Section -->
+  {{#mdl-footer-section}}
+    {{#mdl-footer-dropdown-section title='Docs'}} 
+      {{link-to 'Home' 'index' tagName='li'}}
+      {{link-to 'Privacy' 'index' tagName='li'}}
+    {{/mdl-footer-dropdown-section}}
+    {{#mdl-footer-dropdown-section title='Help'}} 
+      {{link-to 'Support' 'index' tagName='li'}}
+      {{link-to 'Community' 'index' tagName='li'}}
+    {{/mdl-footer-dropdown-section}}
+  {{/mdl-footer-section}}
+  
+  <!-- Bottom Section -->
+  {{#mdl-footer-section align='bottom' title='Bottom Title'}}
+    {{#mdl-footer-linklist}}
+      {{link-to 'Contact Us' 'index' tagName='li'}}
+    {{/mdl-footer-linklist}}
+  {{/mdl-footer-section}}
+
+{{/mdl-mega-footer}}
